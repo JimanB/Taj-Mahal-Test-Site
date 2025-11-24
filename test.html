@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taj Mahal: Monument of Eternal Love</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(rgba(20, 20, 20, 0.85), rgba(40, 40, 40, 0.9)),
+                url('https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1000') center/cover fixed;
+            color: #f8f8f8;
+            line-height: 1.7;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            transition: all 0.5s ease;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to right, #d4af37, #f8f8f8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            color: #d4af37;
+        }
+
+        /* Shapes with different opacity */
+        .shape {
+            position: absolute;
+            z-index: 1;
+        }
+
+        .shape1 {
+            top: 10%;
+            left: 5%;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #d4af37, transparent);
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: pulse 4s infinite;
+        }
+
+        .shape2 {
+            top: 20%;
+            right: 8%;
+            width: 200px;
+            height: 100px;
+            background: linear-gradient(45deg, #d4af37, #8b6914);
+            clip-path: polygon(0 0, 100% 50%, 0 100%);
+            opacity: 0.3;
+            animation: float 6s infinite;
+        }
+
+        .shape3 {
+            bottom: 15%;
+            left: 10%;
+            width: 150px;
+            height: 150px;
+            background: #8b6914;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            opacity: 0.25;
+            animation: rotate 15s linear infinite;
+        }
+
+        /* Gradients */
+        .gradient-section {
+            background: linear-gradient(135deg, rgba(139, 105, 20, 0.2), rgba(212, 175, 55, 0.2));
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .radial-gradient {
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.4), transparent 70%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Content sections */
+        .section {
+            margin: 50px 0;
+            position: relative;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #d4af37;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: #d4af37;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Multimedia section */
+        .multimedia-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .media-card {
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .media-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .media-card h3 {
+            margin: 15px 0;
+            color: #d4af37;
+            font-size: 1.5rem;
+        }
+
+        /* Image map section */
+        .map-container {
+            position: relative;
+            margin: 40px auto;
+            max-width: 800px;
+            border: 3px solid #d4af37;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-map {
+            width: 100%;
+            display: block;
+        }
+
+        .map-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            background: rgba(0, 0, 0, 0.5);
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.4;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0.4;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            .multimedia-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .shape1,
+            .shape2,
+            .shape3 {
+                display: none;
+            }
+        }
+
+        /* SVG Logo */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        .taj-logo {
+            width: 180px;
+            height: 180px;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
+        }
+
+        /* Format Gallery */
+        .format-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .format-card {
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .format-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .format-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .format-card h3 {
+            color: #d4af37;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        /* Feature Highlight */
+        .feature-highlight {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            background: rgba(30, 30, 30, 0.6);
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .feature-text {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .feature-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .feature-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        /* Audio Styling */
+        .audio-container {
+            background: rgba(30, 30, 30, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .audio-title {
+            text-align: center;
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        /* Video Styling */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .video-container iframe,
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Image map styling */
+        area {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        area:hover {
+            opacity: 0.8;
+        }
+
+        /* Floating Callout */
+        .callout {
+            position: absolute;
+            background: rgba(212, 175, 55, 0.9);
+            color: #222;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            display: none;
+            max-width: 250px;
+        }
+
+        /* Enhanced multimedia section */
+        .media-section {
+            background: rgba(20, 20, 20, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            background: linear-gradient(to right, #d4af37, #f8f8f8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #d4af37;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Music Player */
+        .music-player {
+            display: flex;
+            align-items: center;
+            background: rgba(40, 30, 10, 0.7);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .music-info {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .music-info h4 {
+            color: #d4af37;
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .music-controls {
+            display: flex;
+            gap: 15px;
+        }
+
+        .music-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #d4af37;
+            color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .music-btn:hover {
+            transform: scale(1.1);
+            background: #f8f8f8;
+        }
+
+        /* Image map enhancements */
+        .image-map-container {
+            position: relative;
+        }
+
+        /* History Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: #d4af37;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 10px;
+            border-left: 3px solid #d4af37;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #d4af37;
+            border: 4px solid #222;
+            top: 20px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            right: -12px;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -12px;
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: #d4af37;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        /* Audio Player Styling */
+        .audio-player-container {
+            margin-top: 20px;
+        }
+
+        .audio-controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .audio-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #d4af37;
+            color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .audio-btn:hover {
+            transform: scale(1.1);
+            background: #f8f8f8;
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .volume-slider {
+            width: 100px;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: #d4af37;
+            border-radius: 5px;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        .time-display {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Local video styling */
+        .local-video-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .video-placeholder {
+            background: linear-gradient(45deg, rgba(139, 105, 20, 0.3), rgba(212, 175, 55, 0.3));
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .video-placeholder i {
+            font-size: 4rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .video-placeholder h3 {
+            color: #f8f8f8;
+            margin-bottom: 15px;
+        }
+
+        .video-placeholder p {
+            color: #aaa;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="radial-gradient"></div>
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+    <div class="callout" id="feature-callout"></div>
+
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Taj Mahal</h1>
+                <p class="subtitle">A Monument to Eternal Love</p>
+                <p>One of the Seven Wonders of the World • UNESCO World Heritage Site</p>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>The Crown Jewel of India</h2>
+            <div class="gradient-section">
+                <p>The Taj Mahal is an ivory-white marble mausoleum located on the southern bank of the Yamuna river in
+                    the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor Shah Jahan to house the
+                    tomb of his favorite wife, Mumtaz Mahal. The Taj Mahal is recognized as the jewel of Muslim art in
+                    India and one of the universally admired masterpieces of the world's heritage.</p>
+
+                <p>Built over 20 years by 20,000 artisans under the guidance of architect Ustad Ahmad Lahauri, the Taj
+                    Mahal combines elements from Islamic, Persian, Ottoman Turkish and Indian architectural styles. The
+                    complex covers 42 acres and includes a mosque, guest house, and formal gardens.</p>
+            </div>
+        </section>
+
+        <!-- SVG Logo -->
+        <div class="logo-container">
+            <svg class="taj-logo" viewBox="0 0 200 200">
+                <!-- Main Dome -->
+                <path
+                    d="M100,40 C120,40 140,50 150,70 L150,120 C140,140 120,150 100,150 C80,150 60,140 50,120 L50,70 C60,50 80,40 100,40 Z"
+                    fill="#d4af37" opacity="0.9" />
+
+                <!-- Base Structure -->
+                <rect x="30" y="120" width="140" height="20" fill="#f8f8f8" opacity="0.95" />
+
+                <!-- Minarets -->
+                <rect x="40" y="80" width="10" height="60" fill="#f8f8f8" opacity="0.85" />
+                <rect x="150" y="80" width="10" height="60" fill="#f8f8f8" opacity="0.85" />
+
+                <!-- Center Arch -->
+                <path d="M85,120 L85,90 C85,85 90,80 100,80 C110,80 115,85 115,90 L115,120 Z" fill="none"
+                    stroke="#d4af37" stroke-width="3" opacity="0.9" />
+
+                <!-- Side Arches -->
+                <path d="M60,120 L60,100 C60,95 65,90 70,90 C75,90 80,95 80,100 L80,120 Z" fill="none" stroke="#d4af37"
+                    stroke-width="2" opacity="0.8" />
+                <path d="M120,120 L120,100 C120,95 125,90 130,90 C135,90 140,95 140,100 L140,120 Z" fill="none"
+                    stroke="#d4af37" stroke-width="2" opacity="0.8" />
+
+                <!-- Reflecting Pool -->
+                <path d="M40,170 L160,170 L160,180 L40,180 Z" fill="#87CEEB" opacity="0.7" />
+                <path d="M80,170 L120,170 L120,180 L80,180 Z" fill="#5F9EA0" opacity="0.8" />
+
+                <!-- Finial -->
+                <circle cx="100" cy="35" r="5" fill="#d4af37" opacity="0.95" />
+            </svg>
+        </div>
+
+        <!-- Enhanced Multimedia Section -->
+        <div class="media-section">
+            <div class="section-header">
+                <h2>Multimedia Experience</h2>
+                <p>Immerse yourself in the history, music, and beauty of the Taj Mahal</p>
+            </div>
+
+            <!-- Documentary -->
+            <section class="section">
+                <h2>Documentary: The Story of Taj Mahal</h2>
+                <div class="video-container">
+                    <!-- Replaced YouTube iframe with local video -->
+                    <video controls poster="https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        <source src="taj mahal documentary.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <p style="text-align: center; margin-top: 15px;">A comprehensive documentary exploring the history and
+                    significance of this architectural masterpiece</p>
+            </section>
+
+            <!-- Historical Music -->
+            <section class="section">
+                <h2>Mughal Era Music</h2>
+                <div class="music-player">
+                    <div class="music-info">
+                        <h4>Traditional Mughal Court Music</h4>
+                        <p>Music that would have been heard during the Taj Mahal's construction</p>
+                    </div>
+                    <div class="music-controls">
+                        <div class="music-btn" id="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="music-btn" id="pause-btn">
+                            <i class="fas fa-pause"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Audio Player -->
+                <div class="audio-player-container">
+                    <div class="audio-controls">
+                        <div class="audio-btn" id="play-audio">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="audio-btn" id="pause-audio">
+                            <i class="fas fa-pause"></i>
+                        </div>
+                        <div class="volume-control">
+                            <i class="fas fa-volume-up"></i>
+                            <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.01" value="0.7">
+                        </div>
+                    </div>
+
+                    <div class="progress-container" id="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+
+                    <div class="time-display">
+                        <span id="current-time">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+
+                    <!-- Audio element -->
+                    <audio id="taj-music">
+                        <source src="Taj Mahal.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </section>
+
+            <!-- Virtual Tour -->
+            <section class="section">
+                <h2>Virtual Tour</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/49HTIoCccDY" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p style="text-align: center; margin-top: 15px;">Explore the Taj Mahal through this immersive virtual
+                    tour</p>
+            </section>
+        </div>
+
+        <!-- Image Formats Section -->
+        <h2>Image Formats Showcase</h2>
+        <div class="format-gallery">
+            <div class="format-card">
+                <h3>JPEG Version</h3>
+                <img src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=500" alt="Taj Mahal JPEG">
+                <p>High-quality image showing the Taj Mahal's majestic beauty during daytime</p>
+            </div>
+
+            <div class="format-card">
+                <h3>Transparent GIF</h3>
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExazFqM3BsY2ljNjR4eGZ0eXJmdGVqZTV2cjg5aGl2aDI4Nm55NjdlOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ztH1riystr8AM/giphy.gif" alt="Taj Mahal GIF">
+                <p>Animated view of the Taj Mahal with transparent background</p>
+            </div>
+
+            <div class="format-card">
+                <h3>PNG Version</h3>
+                <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=500" alt="Taj Mahal PNG">
+                <p>High-resolution image with transparent elements showing architectural details</p>
+            </div>
+        </div>
+
+        <!-- Text Description Section -->
+        <div class="feature-highlight">
+            <div class="feature-image">
+                <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=600" alt="Taj Mahal Details">
+            </div>
+            <div class="feature-text">
+                <h2>Architectural Marvel</h2>
+                <p>The Taj Mahal represents the finest and most sophisticated example of Indo-Islamic architecture. Its
+                    origins lie in the moving circumstances of its commission and the culture and history of an Islamic
+                    Mughal empire ruling in India.</p>
+                <p>The symmetrical complex is set around formal gardens and raises on a square plinth. The marble dome
+                    that surmounts the tomb is its most spectacular feature. Its height is about 35 meters (115 ft) and
+                    is accentuated as it sits on a cylindrical "drum" about 7 meters (23 ft) high.</p>
+                <p>The minarets, each more than 40 meters (130 ft) tall, display the designer's penchant for symmetry.
+                    They were designed as working minarets — a traditional element of mosques, used by the muezzin to
+                    call the Islamic faithful to prayer.</p>
+            </div>
+        </div>
+
+        <!-- History Timeline -->
+        <section class="section">
+            <h2>Historical Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1592</div>
+                        <p>Shah Jahan born as Prince Khurram, third son of Emperor Jahangir</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1612</div>
+                        <p>Shah Jahan marries Arjumand Banu Begum, who later becomes Mumtaz Mahal</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1631</div>
+                        <p>Mumtaz Mahal dies during childbirth of their 14th child in Burhanpur</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1632</div>
+                        <p>Construction of the Taj Mahal begins in Agra, employing 20,000 workers</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1653</div>
+                        <p>After 22 years of construction, the Taj Mahal complex is completed</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1983</div>
+                        <p>Taj Mahal designated as a UNESCO World Heritage Site</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Google Map -->
+        <section class="section">
+            <h2>Location</h2>
+            <div
+                style="border-radius: 15px; overflow: hidden; margin: 30px 0; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); border: 2px solid rgba(212, 175, 55, 0.3);">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.400553850174!2d78.03995351505037!3d27.175015555058234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39747121d702ff6d%3A0xdd2ae4803f767dde!2sTaj%20Mahal!5e0!3m2!1sen!2sus!4v1629990000000!5m2!1sen!2sus"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <!-- Image Map --><section class="section">
+            <h2>Architectural Features</h2>
+            <div class="map-container">
+                <div class="image-map-container">
+                    <img src="imagemap.jpg" alt="Taj Mahal Detailed View" class="image-map" usemap="#tajmap">
+        
+                    <map name="tajmap">
+                                <area alt="Main Dome" title="Main Dome" href="#" coords="258,74,358,175" shape="rect" 
+                                      onmouseover="showCallout(event, 'Main Dome: The central, large dome of the Taj Mahal.')"
+                                      onmouseout="hideCallout()">
+                                <area alt="Right Minaret" title="Right Minaret" href="#" coords="426,90,543,265" shape="rect" 
+                                      onmouseover="showCallout(event, 'Right Minaret: One of the four slender towers.')"
+                                      onmouseout="hideCallout()">
+                                <area alt="Left Garden" title="Left Garden" href="#" coords="2,430,274,313,237,313,2,364" shape="poly" 
+                                      onmouseover="showCallout(event, 'Left Garden: Part of the formal Charbagh gardens.')"
+                                      onmouseout="hideCallout()">
+                                <area alt="Left Minaret" title="Left Minaret" href="#" coords="89,94,188,276" shape="rect" 
+                                      onmouseover="showCallout(event, 'Left Minaret: One of the four slender towers.')"
+                                      onmouseout="hideCallout()">
+                                <area alt="Pool" title="Pool" href="#" coords="153,430,296,310,321,310,497,430,146,430,504,428" shape="poly" 
+                                      onmouseover="showCallout(event, 'Pool: The reflecting pool in front of the Taj Mahal.')"
+                                      onmouseout="hideCallout()">
+                                <area alt="Right Garden" title="Right Garden" href="#" coords="336,308,612,409,612,343,351,294,364,288" shape="poly" 
+                                      onmouseover="showCallout(event, 'Right Garden: Part of the formal Charbagh gardens.')"
+                                      onmouseout="hideCallout()">
+                            </map>
+                </div>
+        
+                <div class="map-overlay">
+                    <p id="feature-text">Hover over different areas of the Taj Mahal to learn about its architectural features
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Historical Information -->
+        <section class="section">
+            <h2>Historical Significance</h2>
+            <div class="gradient-section">
+                <p>The Taj Mahal was built by Mughal Emperor Shah Jahan in memory of his third wife, Mumtaz Mahal, who
+                    died giving birth to their 14th child in 1631. The emperor was devastated by her death and
+                    envisioned a memorial that would befit her beauty and their love.</p>
+
+                <p>Construction began in 1632 and took approximately 22 years to complete, employing about 20,000
+                    workers from India, Persia, the Ottoman Empire, and Europe. The total cost at the time has been
+                    estimated to be about 32 million rupees, which in modern currency would be over $1 billion.</p>
+
+                <p>The Taj Mahal is considered the finest example of Mughal architecture, blending Persian, Islamic and
+                    Indian styles. In 1983, it became a UNESCO World Heritage Site and has been described as "a teardrop
+                    on the cheek of eternity" by Indian poet Rabindranath Tagore.</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <h3>Taj Mahal: A Testament to Eternal Love</h3>
+                <p>"The sight of this mansion creates sorrowing sighs; And the sun and the moon shed tears from their
+                    eyes" - Inscription on the Taj Mahal</p>
+                <p style="margin-top: 20px;">© 2025 Taj Mahal Heritage Experience | All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Feature callout functions
+        function showCallout(event, text) {
+            const callout = document.getElementById('feature-callout');
+            callout.innerHTML = text;
+            callout.style.display = 'block';
+            callout.style.left = (event.pageX + 15) + 'px';
+            callout.style.top = (event.pageY - 15) + 'px';
+        }
+        
+        function hideCallout() {
+            document.getElementById('feature-callout').style.display = 'none';
+        }
+        
+        // Animation for header on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const scrollPosition = window.scrollY;
+            
+            if (scrollPosition > 100) {
+                header.style.transform = 'translateY(-50px)';
+                header.style.opacity = '0.8';
+            } else {
+                header.style.transform = 'translateY(0)';
+                header.style.opacity = '1';
+            }
+        });
+        
+        // Image map feature display
+        function showFeature(text) {
+            document.getElementById('feature-text').innerHTML = text;
+            event.preventDefault();
+        }
+        
+        // Audio player functionality
+        const audio = document.getElementById('taj-music');
+        const playBtn = document.getElementById('play-audio');
+        const pauseBtn = document.getElementById('pause-audio');
+        const volumeSlider = document.getElementById('volume-slider');
+        const progressBar = document.getElementById('progress-bar');
+        const progressContainer = document.getElementById('progress-container');
+        const currentTimeEl = document.getElementById('current-time');
+        const durationEl = document.getElementById('duration');
+        
+        // Play/pause functionality
+        playBtn.addEventListener('click', () => {
+            audio.play();
+            playBtn.style.display = 'none';
+            pauseBtn.style.display = 'flex';
+        });
+        
+        pauseBtn.addEventListener('click', () => {
+            audio.pause();
+            pauseBtn.style.display = 'none';
+            playBtn.style.display = 'flex';
+        });
+        
+        // Volume control
+        volumeSlider.addEventListener('input', () => {
+            audio.volume = volumeSlider.value;
+        });
+        
+        // Progress bar
+        audio.addEventListener('timeupdate', () => {
+            const percent = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = `${percent}%`;
+            
+            // Update time display
+            currentTimeEl.textContent = formatTime(audio.currentTime);
+            
+            if (!isNaN(audio.duration)) {
+                durationEl.textContent = formatTime(audio.duration);
+            }
+        });
+        
+        // Click on progress bar to seek
+        progressContainer.addEventListener('click', (e) => {
+            const width = progressContainer.clientWidth;
+            const clickX = e.offsetX;
+            const duration = audio.duration;
+            
+            audio.currentTime = (clickX / width) * duration;
+        });
+        
+        // Format time as mm:ss
+        function formatTime(seconds) {
+            const min = Math.floor(seconds / 60);
+            const sec = Math.floor(seconds % 60);
+            return `${min}:${sec < 10 ? '0' : ''}${sec}`;
+        }
+        
+        // Update time display when metadata is loaded
+        audio.addEventListener('loadedmetadata', () => {
+            durationEl.textContent = formatTime(audio.duration);
+        });
+        
+        // Reset play/pause buttons when audio ends
+        audio.addEventListener('ended', () => {
+            pauseBtn.style.display = 'none';
+            playBtn.style.display = 'flex';
+        });
+    </script>
+</body>
+
+</html>
