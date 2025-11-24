@@ -86,7 +86,7 @@ taj_mahal/
 - For full functionality, deploy the website to a web server rather than running locally
 
 #### Missing Files
-- **imagemap.jpg**: This file is referenced in the code but wasn't uploaded. The interactive image map functionality requires this file to be present in the same directory.
+- **taj mahal documentary.mp4**: This file is referenced in the code but wasn't uploaded due to size conflicts with github. The documentary slot on the site this file to be present in the same directory.
 
 ## Browser Compatibility
 
