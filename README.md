@@ -6,27 +6,27 @@ An immersive, multimedia-rich website showcasing the Taj Mahal - one of the Seve
 
 ## Features
 
-### 🎨 Visual Design
+### Visual Design
 - **Gradient Backgrounds**: Multiple layered gradients creating depth and atmosphere
 - **Animated Shapes**: Floating geometric elements with CSS animations
 - **Gold & White Color Scheme**: Inspired by the Taj Mahal's marble and decorative elements
 - **Responsive Layout**: Optimized for all device sizes
 - **Custom SVG Logo**: Vector-based Taj Mahal illustration
 
-### 🎵 Multimedia Experience
+###  Multimedia Experience
 - **Documentary Video**: 40-minute comprehensive documentary (local MP4 file)
 - **Audio Tour**: Guided audio experience of the Taj Mahal (local MP3 file)
 - **Virtual Tour**: YouTube embedded virtual walkthrough
 - **Custom Audio Player**: Full-featured player with progress bar and volume control
 - **Image Gallery**: Multiple format showcase (JPEG, PNG, GIF)
 
-### 📚 Educational Content
+###  Educational Content
 - **Historical Timeline**: Interactive timeline from 1592 to present
 - **Architectural Features**: Detailed explanations of structural elements
 - **Image Map**: Interactive diagram with hover information
 - **Location Map**: Google Maps integration showing exact location
 
-### 🎯 Interactive Elements
+###  Interactive Elements
 - **Hover Callouts**: Informative popups for architectural features
 - **Scroll Animations**: Dynamic header effects
 - **Music Controls**: Play/pause/volume for audio content
